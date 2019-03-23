@@ -33,7 +33,7 @@ extension FirstViewController: UITableViewDataSource {
             cell.urlLabel.text = url
             CyberDefenseApi.shared.validateServerSecurity(url: url) { (result) in
                 let safe = CyberDefenseApi.shared.trustedServer[url] ?? false
-                cell.statusLabel.text = safe ? "Segura" : "insegura"
+                cell.statusLabel.text = safe ? "SEGURA" : "INSEGURA"
                 if safe {
                     cell.statusLabel.textColor = .green
                 } else {

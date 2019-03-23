@@ -10,7 +10,8 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
-    let serverURLs = ["https://ec2-100-26-89-97.compute-1.amazonaws.com/", "https://parsify-format.p.rapidapi.com/"]
+    let serverURLs = ["https://ec2-100-26-89-97.compute-1.amazonaws.com/",
+                      "https://parsify-format.p.rapidapi.com/"]
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -31,8 +32,7 @@ extension FirstViewController: UITableViewDataSource {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "ServerStatusCell", for: indexPath) as? ServerComunicationStatusCellTableViewCell {
             let url = serverURLs[indexPath.row]
             cell.urlLabel.text = url
-            CyberDefenseApi.shared.validateServerSecurity(url: url) { (result) in
-                let safe = CyberDefenseApi.shared.trustedServer[url] ?? false
+            CyberDefenseApi.shared.validateServerSecurity(url: url) { (safe) in
                 cell.statusLabel.text = safe ? "SEGURA" : "INSEGURA"
                 if safe {
                     cell.statusLabel.textColor = .green

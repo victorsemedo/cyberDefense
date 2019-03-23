@@ -31,8 +31,14 @@ extension FirstViewController: UITableViewDataSource {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "ServerStatusCell", for: indexPath) as? ServerComunicationStatusCellTableViewCell {
             let url = serverURLs[indexPath.row]
             cell.urlLabel.text = url
-            CyberDefenseApi.shared.validateServerSecurity(url: url) { (safe) in
+            CyberDefenseApi.shared.validateServerSecurity(url: url) { (result) in
+                let safe = CyberDefenseApi.shared.trustedServer[url] ?? false
                 cell.statusLabel.text = safe ? "Segura" : "insegura"
+                if safe {
+                    cell.statusLabel.textColor = .green
+                } else {
+                    cell.statusLabel.textColor = .red
+                }
             }
             return cell
         }

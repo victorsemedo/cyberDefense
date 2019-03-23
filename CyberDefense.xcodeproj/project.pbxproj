@@ -16,7 +16,8 @@
 		E103F58022458AF9007705DA /* CyberDefenseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E103F57F22458AF9007705DA /* CyberDefenseUITests.swift */; };
 		E103F58E22458EF9007705DA /* ServerComunicationStatusCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E103F58D22458EF9007705DA /* ServerComunicationStatusCellTableViewCell.swift */; };
 		E103F5902245B782007705DA /* CyberDefenseApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = E103F58F2245B782007705DA /* CyberDefenseApi.swift */; };
-		E103F5952245D52E007705DA /* amazonawscom.cer in Resources */ = {isa = PBXBuildFile; fileRef = E103F5942245D52E007705DA /* amazonawscom.cer */; };
+		E103F59C2245DAD4007705DA /* amazonawscom.cer in Resources */ = {isa = PBXBuildFile; fileRef = E103F59A2245DAD4007705DA /* amazonawscom.cer */; };
+		E103F59D2245DAD4007705DA /* amazonawscom.crt in Resources */ = {isa = PBXBuildFile; fileRef = E103F59B2245DAD4007705DA /* amazonawscom.crt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +53,8 @@
 		E103F58122458AF9007705DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E103F58D22458EF9007705DA /* ServerComunicationStatusCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerComunicationStatusCellTableViewCell.swift; sourceTree = "<group>"; };
 		E103F58F2245B782007705DA /* CyberDefenseApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyberDefenseApi.swift; sourceTree = "<group>"; };
-		E103F5942245D52E007705DA /* amazonawscom.cer */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = amazonawscom.cer; path = ../../../amazonawscom.cer; sourceTree = "<group>"; };
+		E103F59A2245DAD4007705DA /* amazonawscom.cer */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = amazonawscom.cer; sourceTree = "<group>"; };
+		E103F59B2245DAD4007705DA /* amazonawscom.crt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = amazonawscom.crt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,7 +139,8 @@
 		E103F5912245CD1A007705DA /* Certificates */ = {
 			isa = PBXGroup;
 			children = (
-				E103F5942245D52E007705DA /* amazonawscom.cer */,
+				E103F59A2245DAD4007705DA /* amazonawscom.cer */,
+				E103F59B2245DAD4007705DA /* amazonawscom.crt */,
 			);
 			path = Certificates;
 			sourceTree = "<group>";
@@ -246,7 +249,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E103F5952245D52E007705DA /* amazonawscom.cer in Resources */,
+				E103F59C2245DAD4007705DA /* amazonawscom.cer in Resources */,
+				E103F59D2245DAD4007705DA /* amazonawscom.crt in Resources */,
 				E103F56A22458AF9007705DA /* LaunchScreen.storyboard in Resources */,
 				E103F56722458AF9007705DA /* Assets.xcassets in Resources */,
 				E103F56522458AF8007705DA /* Main.storyboard in Resources */,
